@@ -1,30 +1,30 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 import TopHeader from './components/header/TopHeader';
 import MainHeader from './components/header/MainHeader';
 import MainFooter from './components/footer/MainFooter';
-import Home from './pages';
-import Error from './pages/Error';
+
+import AboutPage from './pages/about/AboutPage';
+import TeamPage from './pages/TeamPage';
+import HomePage from './pages';
 function App() {
   return (
-  <div class="body-inner">
-    <BrowserRouter>
+  
+    <Router>
+    <div class="body-inner">
     <TopHeader/>
     <MainHeader/>
     <Switch>
-    <Route exact path="/" component={Home} />
-                    {/* <Route exact path="/about" component={About} />
-                    <Route exact path="/services" component={Services} />
-                    <Route exact path="/contact" component={Contact} /> */}
-                    <Route component={Error} />
-    </Switch>
-    <MainFooter/>
-    </BrowserRouter>
-
-
-  
+    <Route exact path="/" component={HomePage} />
+     <Route exact path="/about" component={AboutPage} />
+     <Route exact path="/team" component={TeamPage} />
+    {/* <Route exact path="/contact" component={Contact} /> */}
+     <Route component={Error} />  
+    </Switch>    
+    <MainFooter/>    
+      </div>
+    </Router> 
   
 
-  </div>
  
   );
 }
