@@ -25,14 +25,14 @@ const MainHeader = () => {
               
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav ml-auto align-items-center">
-                    <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>                     
+                    <li class="nav-item"><Link class="nav-link back-to-top" to="/">Home</Link></li>                     
 
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
                             <li><Link to="/about">About Us</Link></li>
                             <li><Link to="/team">Our People</Link></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><Link to="/testimonials">Testimonials</Link></li>
                             <li><a href="faq.html">Faq</a></li>
                             <li><a href="pricing.html">Pricing</a></li>
                           </ul>
@@ -79,10 +79,10 @@ const MainHeader = () => {
                           </ul>
                       </li>
               
-                      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                      <li class="nav-item"><Link class="nav-link" to="/contact">Contact</Link></li>
 
                       <li class="header-get-a-quote">
-                          <a class="btn btn-primary" href="contact.html">Get Free Quote</a>
+                          <Link class="btn btn-primary" to="/contact">Get Free Quote</Link>
                       </li>
                     </ul>
                 </div>

@@ -6,22 +6,25 @@ import MainFooter from './components/footer/MainFooter';
 import AboutPage from './pages/about/AboutPage';
 import TeamPage from './pages/TeamPage';
 import HomePage from './pages';
+import Testimonials from './pages/Testimonials';
+import Contact from './pages/Contact';
 function App() {
   return (
   
     <Router>
-    <div class="body-inner">
+    {/* <div class="body-inner"> */}
     <TopHeader/>
     <MainHeader/>
     <Switch>
     <Route exact path="/" component={HomePage} />
      <Route exact path="/about" component={AboutPage} />
      <Route exact path="/team" component={TeamPage} />
-    {/* <Route exact path="/contact" component={Contact} /> */}
+    <Route exact path="/testimonials" component={Testimonials} />
+    <Route exact path="/contact" component={Contact} />
      <Route component={Error} />  
     </Switch>    
     <MainFooter/>    
-      </div>
+      {/* </div> */}
     </Router> 
   
 
